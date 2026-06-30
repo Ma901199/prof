@@ -1,1 +1,193 @@
-# prof
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+
+<header class="nav">
+  <div class="nav__inner">
+    <div class="nav__logo">Mak<span>AR</span></div>
+
+    <ul class="nav__links">
+      <li><a href="#hero">Главная</a></li>
+      <li><a href="#works">Работы</a></li>
+      <li><a href="#tools">Навыки</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+
+    <button class="nav__toggle" id="themeToggle">
+      🌙
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <img class="hero__bg" src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c" />
+  <div class="hero__overlay"></div>
+
+  <div class="hero__content">
+    <div class="hero__badge">VIDEO EDITOR</div>
+
+    <h1 class="hero__title">
+      Я создаю <span class="accent">монтаж</span> который цепляет
+    </h1>
+
+    <p class="hero__sub">
+      Ролики, трейлеры, клипы и динамичный монтаж под любой стиль
+    </p>
+
+    <a href="#works" class="hero__cta">Смотреть работы ➜</a>
+  </div>
+
+  <div class="hero__scroll">↓</div>
+</section>
+
+
+<section class="section section--alt" id="works">
+  <div class="section__inner">
+
+    <div class="section__label">ПОРТФОЛИО</div>
+    <div class="section__title">Мои работы</div>
+
+    <div class="filter">
+      <button class="filter__btn active" data-filter="all">Все</button>
+      <button class="filter__btn" data-filter="gaming">Gaming</button>
+      <button class="filter__btn" data-filter="cinematic">Cinematic</button>
+    </div>
+
+    <div class="works-grid">
+
+      <div class="card" data-type="gaming">
+        <div class="card__thumb">
+          <img src="https://images.unsplash.com/photo-1603481546579-65d935ba9cdd">
+          <div class="card__overlay">
+            <div class="card__play">▶</div>
+          </div>
+          <div class="card__tag">Gaming</div>
+        </div>
+        <div class="card__body">
+          <div class="card__info">
+            <h3>Valorant Montage</h3>
+            <p>High FPS edit</p>
+          </div>
+          <button class="card__btn">Открыть</button>
+        </div>
+      </div>
+
+      <div class="card" data-type="cinematic">
+        <div class="card__thumb">
+          <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba">
+          <div class="card__overlay">
+            <div class="card__play">▶</div>
+          </div>
+          <div class="card__tag">Cinematic</div>
+        </div>
+        <div class="card__body">
+          <div class="card__info">
+            <h3>Short Film Edit</h3>
+            <p>Color grading</p>
+          </div>
+          <button class="card__btn">Открыть</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tools">
+  <div class="section__inner">
+
+    <div class="section__label">SKILLS</div>
+    <div class="section__title">Мои навыки</div>
+
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <div class="tool-card__header">
+          <div class="tool-card__name">Premiere Pro</div>
+          <div class="tool-card__level">90%</div>
+        </div>
+        <div class="skill-bar"><div class="skill-bar__fill" data-skill="90"></div></div>
+        <div class="tool-card__desc">Монтаж, эффекты, тайминг</div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card__header">
+          <div class="tool-card__name">After Effects</div>
+          <div class="tool-card__level">80%</div>
+        </div>
+        <div class="skill-bar"><div class="skill-bar__fill" data-skill="80"></div></div>
+        <div class="tool-card__desc">Анимации и motion design</div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card__header">
+          <div class="tool-card__name">Color Grading</div>
+          <div class="tool-card__level">70%</div>
+        </div>
+        <div class="skill-bar"><div class="skill-bar__fill" data-skill="70"></div></div>
+        <div class="tool-card__desc">Киношная цветокоррекция</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="contact">
+  <div class="section__inner">
+
+    <div class="section__label">CONTACTS</div>
+    <div class="section__title">Связаться со мной</div>
+
+    <div class="contacts-grid">
+      <div class="contact-card">
+        <div class="contact-card__icon">✉</div>
+        <div>
+          <div class="contact-card__label">Email</div>
+          <div class="contact-card__value">example@mail.com</div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-card__icon">💬</div>
+        <div>
+          <div class="contact-card__label">Discord</div>
+          <div class="contact-card__value">user#0001</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="modal-backdrop" id="modal" style="display:none;">
+  <div class="modal-backdrop__overlay"></div>
+
+  <div class="modal">
+    <div class="modal__thumb">
+      <img src="https://images.unsplash.com/photo-1505238680356-667803448bb6">
+      <button class="modal__close" id="closeModal">✖</button>
+      <div class="modal__tag">Preview</div>
+    </div>
+
+    <div class="modal__body">
+      <div class="modal__title">Project Title</div>
+      <div class="modal__views">1.2M views</div>
+      <div class="modal__desc">Описание проекта...</div>
+
+      <button class="modal__dismiss" id="closeModal2">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
